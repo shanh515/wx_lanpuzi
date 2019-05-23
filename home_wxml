@@ -1,0 +1,59 @@
+<!--搜索框-->
+<view class="search">
+  <form class="search_input">
+    <input type="text" placeholder="搜索商品" />
+  </form>
+  <button class="btn" size='mini'>搜索</button>
+</view>
+<!--轮播图-->
+<view class="head">
+  <navigator>
+    <swiper autoplay="true" interval="3000" vertical="false" indicator-dots="true">
+        <swiper-item>
+          <image mode="widthFix" src="http://127.0.0.1:3000/img/wumeitang04.jpg"></image>
+          <image mode="widthFix" src="http://127.0.0.1:3000/img/wm05.jpg"></image>
+          <image mode="widthFix" src="http://127.0.0.1:3000/img/bz2.jpg"></image>
+          <image mode="widthFix" src="http://127.0.0.1:3000/img/tang03.jpg"></image>
+        </swiper-item>
+    </swiper>
+  </navigator>  
+</view>
+<view class="middle">
+  <text class="middle_text">经典热销</text>
+  <!--商品列表-->
+  <view class="shop">
+    <!--商品图片-->
+    <image src="http://127.0.0.1:3000/img/wumeitang.jpg" class="shop-img"/>
+    <!--商品信息-->
+    <view class="shop-info">
+      <navigator>
+    <!--商品名称--><view class="shop-sname">乌梅汤原料包*买两袋送冰糖糖浆*</view>
+    <!--商品介绍--><view class="shop-content">地道选材 生津解暑 净含量520克(65克×8包)</view>
+    <!--商品价格--><view class="shop-price">￥128</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="shop">
+    <image src="http://127.0.0.1:3000/img/bz1.jpg" class="shop2-img"></image>
+    <view class="shop2-info">
+      <navigator>
+    <!--商品名称--><view class="shop-sname">八珍粉</view>
+    <!--商品介绍--><view class="shop-content">地道选材 八珍粉生制精粉 净含量450克</view>
+    <!--商品价格--><view class="shop-price">￥128</view>
+      </navigator>
+    </view>
+  </view>
+  
+  <text class="middle_text">懒家精品</text><!-- wx:for="{{list}}" wx:key="index"-->
+    <view class="shop_list" wx:for="{{list}}" wx:key="index">
+      <image class="shop-list-img" src="http://127.0.0.1:3000/img/{{item.img_url}}"></image>
+      <view class="shop3-info">
+      <navigator>
+    <!--商品名称--><view class="shop3-sname">{{item.sname}}</view>
+    <!--商品介绍--><view class="shop3-content ell">{{item.content}}</view>
+    <!--商品价格--><view class="shop3-price">￥{{item.price}}</view>
+      </navigator>
+    </view>
+    </view>
+</view>
